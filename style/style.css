@@ -36,7 +36,7 @@ section#main div.image img {
   width: 200px;
   border-radius: 50%;
   background-position: center;
-  height: 180px;
+  height: 200px;
 }
 
 section#second {
@@ -58,7 +58,7 @@ section#second div.skills {
 }
 
 section#second div.skills img {
-  width: 100px;
+  width: 200px;
   margin-right: 10px;
 }
 
