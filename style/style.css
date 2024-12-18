@@ -36,7 +36,7 @@ section#main div.image img {
   width: 200px;
   border-radius: 50%;
   background-position: center;
-  height: 200px;
+  height: 180px;
 }
 
 section#second {
@@ -79,7 +79,7 @@ section#second div.skills img {
   }
 
   nav ul {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     margin-left: 0;
   }
@@ -102,6 +102,7 @@ section#second div.skills img {
   section#second {
     flex-direction: column;
     padding: 1em;
+    height: 100vmax;
   }
 
   section#second div.about,
@@ -111,8 +112,20 @@ section#second div.skills img {
   }
 
   section#second div.skills img {
-    width: 100px;
+    width: 80px;
     margin-bottom: 10px;
+    margin-right: 0;
+    display: inline-block;
+  }
+
+  section#second div.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav {
+    align-items: center;
   }
 
   nav ul {
@@ -122,5 +135,62 @@ section#second div.skills img {
 
   nav ul li {
     margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 440px) {
+  section#main {
+    height: auto;
+    padding: 1em;
+  }
+
+  section#main div.image img {
+    width: 120px;
+    height: 120px;
+  }
+
+  section#second {
+    flex-direction: column;
+    padding: 1em;
+  }
+
+  section#second div.about,
+  section#second div.skills {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  section#second div.skills img {
+    width: 70px;
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+
+  section#second div.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav {
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .teks p {
+    font-size: 0.9em;
   }
 }
