@@ -36,6 +36,7 @@ section#main div.image img {
   width: 200px;
   border-radius: 50%;
   background-position: center;
+  height: 200px;
 }
 
 section#second {
