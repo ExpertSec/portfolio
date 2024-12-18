@@ -57,7 +57,7 @@ section#second div.skills {
   width: 50%;
 }
 
-section#second div.skills img {
+section#second div.skills div.projek img {
   width: 200px;
   margin-right: 10px;
 }
@@ -73,7 +73,7 @@ section#second div.skills img {
     width: 100%;
   }
 
-  section#second div.skills img {
+  section#second div.skills div.projek img {
     width: 150px;
     margin-bottom: 10px;
   }
@@ -110,7 +110,7 @@ section#second div.skills img {
     margin-bottom: 1em;
   }
 
-  section#second div.skills img {
+  section#second div.skills div.projek img {
     width: 100px;
     margin-bottom: 10px;
   }
