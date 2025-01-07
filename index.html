@@ -3,48 +3,90 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="./style/style.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="#">profile</a></li>
-        <li><a href="#">skills</a></li>
-        <li><a href="#">contact</a></li>
-      </ul>
-    </nav>
-    <section id="main">
-      <div class="image">
-        <img src="./image/myphoto.jpg" alt="photo" />
+    <header>
+      <div class="logo">
+        <h1>Anwar Murtado</h1>
       </div>
+      <nav>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-      <h1>Anwar Murtado</h1>
-      <h1><span id="randomtext"></span></h1>
-    </section>
-    <section id="second">
-      <div class="about">
-        <h2>About Me</h2>
-        <div class="teks">
-          <p>
-            saya adalah seorang mahasiswa universitas pamulang jurusan sistem
-            informasi saya memiliki keahlian multi talent technology di
-            antaranya beberapa keahlian di bidang cyber security,machine
-            learning,data science,internet of things,mobile programming,web
-            programming dan masih banyak lagi
-          </p>
-        </div>
-      </div>
-      <div class="skills">
-        <h2>skills</h2>
-        <div class="projek">
-          <img src="./image/programming.png" alt="programming" />
-          <img src="./image/iot.png" alt="internet of things" />
-          <img src="./image/cybersecurity.png" alt="cybersecurity" />
-          <img src="./image/desaingrafis.png" alt="desaingrafis" />
+    <section id="hero">
+      <div class="hero-content">
+        <h2>Hi, I'm Anwar</h2>
+        <p>Multi-talented Tech Enthusiast</p>
+        <div class="hero-image">
+          <img src="./image/myphoto.jpg" alt="Anwar Murtado" />
         </div>
       </div>
     </section>
+
+    <section id="about">
+      <div class="about-content">
+        <h2>Tentang Saya</h2>
+        <p>
+          Saya seorang mahasiswa di Universitas Pamulang, jurusan Sistem
+          Informasi. Keahlian saya mencakup berbagai teknologi termasuk Keamanan
+          Cyber, Pembelajaran Mesin, Ilmu Data, IoT, Pengembangan Web & Seluler,
+          dan banyak lagi.
+        </p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Keahlian</h2>
+      <div class="skills-container">
+        <div class="skill-card">
+          <img src="./image/programming.png" alt="Programming" />
+          <h3>Programming</h3>
+        </div>
+        <div class="skill-card">
+          <img src="./image/iot.png" alt="Internet of Things" />
+          <h3>IoT</h3>
+        </div>
+        <div class="skill-card">
+          <img src="./image/cybersecurity.png" alt="Cybersecurity" />
+          <h3>Cybersecurity</h3>
+        </div>
+        <div class="skill-card">
+          <img src="./image/desaingrafis.png" alt="Graphic Design" />
+          <h3>Graphics Design</h3>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Kontak Saya</h2>
+      <div class="contact-info">
+        <ul>
+          <li>
+            <a href="#"><i class="ph ph-facebook-logo"></i> Anwar Murtado</a>
+          </li>
+          <li>
+            <a href="#"><i class="ph ph-whatsapp-logo"></i> 08888777698</a>
+          </li>
+          <li>
+            <a href="#"><i class="ph ph-github-logo"></i> ExpertSec</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <p>Anwar Murtado</p>
+    </footer>
+
     <script src="./js/script.js"></script>
   </body>
 </html>
