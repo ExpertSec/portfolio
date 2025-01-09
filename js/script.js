@@ -22,3 +22,11 @@ let random = () => {
   }, 2000);
 };
 random();
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleButton = document.querySelector(".toggle");
+  const navMenu = document.querySelector("nav");
+
+  toggleButton.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+});
