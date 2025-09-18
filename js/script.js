@@ -1,13 +1,42 @@
 const words = [
   "desainer grafis",
-  "IOT Engineer",
+  "Electronic Engineer",
   "Software Developer",
   "Data Analyst",
   "Machine Learning Engineer",
   "Data Scientist",
   "Cybersecurity Specialist",
-  "Web Developer",
 ];
+function scrollReveal() {
+  if (window.innerWidth <= 450) {
+    ScrollReveal().reveal(".skill-card", {
+      origin: "left",
+      distance: "300px",
+      duration: 500,
+      delay: 100,
+      easing: "ease-in-out",
+      reset: true,
+      interval: 100,
+    });
+  } else {
+    ScrollReveal().reveal(".skill-card", {
+      origin: "bottom",
+      distance: "150px",
+      duration: 500,
+      delay: 100,
+      easing: "ease-in-out",
+      reset: true,
+      interval: 100,
+    });
+  }
+}
+document.addEventListener("DOMContentLoaded", () => {
+  scrollReveal();
+});
+window.addEventListener("resize", () => {
+  scrollReveal();
+});
+
 const span = document.getElementById("randomtext");
 let random = () => {
   let acak = setInterval(() => {
