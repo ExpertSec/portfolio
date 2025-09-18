@@ -33,12 +33,7 @@ function scrollReveal() {
     });
   }
 }
-document.addEventListener("DOMContentLoaded", () => {
-  scrollReveal();
-});
-window.addEventListener("resize", () => {
-  scrollReveal();
-});
+document.addEventListener("DOMContentLoaded", scrollReveal);
 
 const span = document.getElementById("randomtext");
 let random = () => {
