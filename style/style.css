@@ -133,8 +133,13 @@ header .toggle span {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  overflow: visible;
   gap: 2rem;
 }
+/* .skills-container:hover {
+  background-color: red;
+  transform: scale(1.2);
+} */
 
 .skill-card {
   background-color: white;
@@ -145,6 +150,13 @@ header .toggle span {
   width: 200px;
   transition: transform 0.3s ease-in-out;
 }
+/* .skill-card.reveal {
+  transform: translateY(0);
+}
+
+.skill-card.reveal:hover {
+  transform: translateY(0) scale(1.2);
+} */
 
 .skill-card img {
   width: 100%;
@@ -159,7 +171,8 @@ header .toggle span {
 }
 
 .skill-card:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
+  cursor: pointer;
 }
 #contact {
   background-color: #34495e;

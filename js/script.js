@@ -27,6 +27,9 @@ function scrollReveal() {
       easing: "ease-in-out",
       reset: true,
       interval: 100,
+      // beforeReveal: (el) => {
+      //   el.classList.add("reveal")
+      // }
     });
   }
 }
