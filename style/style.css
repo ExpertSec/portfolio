@@ -34,7 +34,9 @@ header {
   top: 0;
   z-index: 10;
 }
-
+header div.conainer nav {
+  transition: 1s all ease-in-out;
+}
 header .logo {
   flex-grow: 1;
 }
@@ -69,6 +71,9 @@ header .toggle span {
   height: 5px;
   background-color: white;
   border-radius: 5px;
+}
+header .toggle span.active {
+  transform: rotate(45deg);
 }
 #hero {
   display: flex;
@@ -236,6 +241,12 @@ footer {
   }
   header .logo h1 {
     font-size: 1.5rem;
+  }
+  header div.container div.toggle span.toggle {
+    transform: rotateY(45deg);
+  }
+  section#hero {
+    max-height: 47vmax;
   }
 }
 @media screen and (max-width: 480px) {

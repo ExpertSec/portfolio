@@ -57,3 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     navMenu.classList.toggle("active");
   });
 });
+let spanToggle = document.getElementById("toggle");
+spanToggle.addEventListener("click", () => {
+  document.getElementById("span").classList.toggle("active");
+});
