@@ -15,7 +15,7 @@ function scrollReveal() {
       duration: 500,
       delay: 100,
       easing: "ease-in-out",
-      reset: true,
+      reset: false,
       interval: 100,
     });
   } else {
@@ -25,7 +25,7 @@ function scrollReveal() {
       duration: 500,
       delay: 100,
       easing: "ease-in-out",
-      reset: true,
+      reset: false,
       interval: 100,
       // beforeReveal: (el) => {
       //   el.classList.add("reveal")
