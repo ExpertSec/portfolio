@@ -238,3 +238,11 @@ footer {
     font-size: 1.5rem;
   }
 }
+@media screen and (max-width: 480px) {
+  #hero .hero-content h2 {
+    font-size: 1.3em;
+  }
+  #hero .hero-content p {
+    font-size: 1em;
+  }
+}
