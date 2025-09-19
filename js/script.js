@@ -59,5 +59,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 let spanToggle = document.getElementById("toggle");
 spanToggle.addEventListener("click", () => {
-  document.getElementById("span").classList.toggle("active");
+  spanToggle.classList.toggle("active");
 });
+// window.addEventListener("load", () => {
+//   document.getElementById("span").style.transition = "0s all ease-in-out";
+// });
