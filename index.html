@@ -6,6 +6,101 @@
     <title>portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./asset/style/style.css" />
+    <style>
+      /* ── LIGHTBOX ── */
+      #lightbox {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        background: rgba(0, 0, 0, 0.92);
+        backdrop-filter: blur(6px);
+        align-items: center;
+        justify-content: center;
+        animation: lb-fade-in 0.25s ease;
+      }
+      #lightbox.active {
+        display: flex;
+      }
+      @keyframes lb-fade-in {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .lb-content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        animation: lb-scale-in 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+      @keyframes lb-scale-in {
+        from {
+          transform: scale(0.82);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      .lb-img-wrap {
+        max-width: min(90vw, 720px);
+        max-height: 80vh;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.7);
+        border: 1.5px solid rgba(255, 255, 255, 0.12);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .lb-img-wrap img {
+        max-width: 100%;
+        max-height: 80vh;
+        object-fit: contain;
+        display: block;
+      }
+      .lb-caption {
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 0.9rem;
+        text-align: center;
+      }
+      .lb-close {
+        position: fixed;
+        top: 20px;
+        right: 24px;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.15);
+        border: 1.5px solid rgba(255, 255, 255, 0.25);
+        color: #fff;
+        font-size: 1.3rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition:
+          background 0.2s,
+          transform 0.2s;
+        z-index: 10000;
+        line-height: 1;
+      }
+      .lb-close:hover {
+        background: rgba(29, 78, 216, 0.85);
+        transform: scale(1.1);
+      }
+      /* cursor zoom pada foto profil & gambar project */
+      #profile img,
+      #projects img {
+        cursor: zoom-in;
+      }
+    </style>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -256,6 +351,33 @@
             View Project
           </a>
         </div>
+        <div
+          class="bg-white rounded-xl shadow-md p-6 flex flex-col text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+        >
+          <img
+            src="./asset/img/trackerapp.png"
+            alt="Android"
+            class="w-full h-40 object-cover rounded-lg mb-5"
+          />
+
+          <h3 class="font-semibold text-[1.35rem] mb-2">Expense Tracker App</h3>
+          <p class="text-gray-600 text-base leading-relaxed mb-6">
+            Aplikasi pencatat keuangan pribadi Android yang dibangun dengan
+            <strong>Jetpack Compose</strong> dan menerapkan
+            <strong>Clean Architecture</strong> (Domain, Data, Presentation).
+            Dilengkapi fitur tambah/edit/hapus transaksi, statistik bulanan,
+            pencarian real-time, filter kategori, dan dark mode. Menggunakan
+            Room, Hilt, ViewModel, serta StateFlow untuk manajemen state yang
+            reaktif.
+          </p>
+
+          <a
+            href="https://github.com/ExpertSec/expenseTrackApp"
+            class="mt-auto inline-block px-5 py-2 bg-blue-700 text-white rounded-md hover:bg-blue-800 transition"
+          >
+            View Project
+          </a>
+        </div>
       </div>
     </section>
     <section id="experience" class="py-24 px-6 md:px-12 bg-white">
@@ -264,17 +386,15 @@
       </h2>
 
       <div class="max-w-4xl mx-auto relative">
-        <!-- Garis Timeline -->
         <div class="absolute left-2 top-0 h-full w-0.5 bg-blue-600"></div>
 
         <div class="space-y-16 pl-10">
-          <!-- 2022 -->
           <div class="relative">
             <span
               class="absolute -left-[38px] top-[2.6rem] w-4 h-4 bg-blue-600 rounded-full border-4 border-white"
             ></span>
 
-            <span class="text-sm font-semibold text-blue-600"> 2022 </span>
+            <span class="text-sm font-semibold text-blue-600"> 2023 </span>
 
             <h3 class="text-2xl font-bold text-gray-800 mt-1">
               Mahasiswa Sistem Informasi
@@ -288,13 +408,12 @@
             </p>
           </div>
 
-          <!-- 2023 -->
           <div class="relative">
             <span
               class="absolute -left-[38px] top-[2.6rem] w-4 h-4 bg-blue-600 rounded-full border-4 border-white"
             ></span>
 
-            <span class="text-sm font-semibold text-blue-600"> 2023 </span>
+            <span class="text-sm font-semibold text-blue-600"> 2024 </span>
 
             <h3 class="text-2xl font-bold text-gray-800 mt-1">
               Teknisi Elektronika
@@ -309,7 +428,6 @@
             </p>
           </div>
 
-          <!-- 2024 -->
           <div class="relative">
             <span
               class="absolute -left-[38px] top-[2.6rem] w-4 h-4 bg-blue-600 rounded-full border-4 border-white"
@@ -395,5 +513,50 @@
       crossorigin="anonymous"
     ></script>
     <script src="./asset/script/script.js"></script>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox">
+      <button class="lb-close" id="lbClose">&#x2715;</button>
+      <div class="lb-content" id="lbContent"></div>
+    </div>
+
+    <script>
+      const lightbox = document.getElementById("lightbox");
+      const lbContent = document.getElementById("lbContent");
+      const lbClose = document.getElementById("lbClose");
+
+      function openLightbox(src, caption) {
+        lbContent.innerHTML =
+          `<div class="lb-img-wrap"><img src="${src}" alt="${caption}"></div>` +
+          (caption ? `<p class="lb-caption">${caption}</p>` : "");
+        lightbox.classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+      function closeLightbox() {
+        lightbox.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+
+      lbClose.addEventListener("click", closeLightbox);
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) closeLightbox();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeLightbox();
+      });
+
+      /* Foto profil */
+      const profileImg = document.querySelector("#profile img");
+      if (profileImg) {
+        profileImg.addEventListener("click", () =>
+          openLightbox(profileImg.src, "Anwar Murtado"),
+        );
+      }
+
+      /* Gambar project */
+      document.querySelectorAll("#projects img").forEach((img) => {
+        img.addEventListener("click", () => openLightbox(img.src, img.alt));
+      });
+    </script>
   </body>
 </html>
